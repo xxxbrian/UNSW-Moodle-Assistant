@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+	"name": "UNSW打卡助手",
+	"version": "1.0",
+	"description": "A Moodle chrome extension for UNSW students.",
+	"author": "Bojin Li",
+	"icons":
+	{
+		"16": "img/icon.png",
+		"48": "img/icon.png",
+		"128": "img/icon.png",
+		"512": "img/icon.png"
+	},
+	"browser_action": 
+	{
+		"default_icon": "img/icon.png",
+		"default_title": "UNSW-Moodle打卡助手",
+		"default_popup": "popup.html"
+	},
+	"content_scripts": 
+	[
+		{
+			"matches": ["https://moodle.telt.unsw.edu.au/*"],
+			"js": ["src/content-script.js"],
+			"css": ["css/assistant.css"],
+			"run_at": "document_end"
+		}
+	],
+	"homepage_url": "https://github.com/xxxbrian"
+}
