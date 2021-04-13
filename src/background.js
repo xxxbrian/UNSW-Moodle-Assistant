@@ -1,9 +1,3 @@
-/**
- * moodleDownloader - a chrome extension for batch downloading Moodle resources 💾
- * Copyright (c) 2018 Harsil Patel
- * https://github.com/harsilspatel/MoodleDownloader
- */
-
 function getDownloadOptions(sesskey, url) {
 	if (!url.includes("folder")) {
 		// Resources, URLs, Pages.
