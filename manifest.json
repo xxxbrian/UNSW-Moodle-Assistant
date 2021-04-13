@@ -1,7 +1,7 @@
 {
 	"manifest_version": 2,
-	"name": "UNSW打卡助手",
-	"version": "1.0",
+	"name": "UNSW Moodle Assistant",
+	"version": "2.0",
 	"description": "A Moodle chrome extension for UNSW students.",
 	"author": "Bojin Li",
 	"icons":
@@ -14,8 +14,8 @@
 	"browser_action": 
 	{
 		"default_icon": "img/icon.png",
-		"default_title": "UNSW-Moodle打卡助手",
-		"default_popup": "popup.html"
+		"default_title": "UNSW Moodle Assistant",
+		"default_popup": "src/popup.html"
 	},
 	"content_scripts": 
 	[
@@ -26,5 +26,12 @@
 			"run_at": "document_end"
 		}
 	],
-	"homepage_url": "https://github.com/xxxbrian"
+	"homepage_url": "https://github.com/xxxbrian",
+	"content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'",
+	"permissions": 
+	[
+		"activeTab",
+		"downloads",
+		"storage"
+	]
 }
